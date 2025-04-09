@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+## Descrição do Desafio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crie uma aplicação React com TypeScript que consuma a API pública PokéAPI (https://pokeapi.co) para buscar e listar Pokémons, implementando as seguintes funcionalidades:
 
-Currently, two official plugins are available:
+1.  Busca de Pokémons:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+    • Utilize o endpoint /api/v2/pokemon para obter uma lista de Pokémons.
+    • Exiba os Pokémons retornados em uma tabela ou lista, com informações básicas (exemplo: nome e URL).
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.  Filtro:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+    • Adicione um campo de filtro para que o usuário possa buscar por nome entre os resultados já listados.
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+3.  Estilização com Styled-Components:
+
+```
+    • Aplique estilos no componente da listagem (tabela ou lista) usando styled-components.
+```
+
+Requisitos Técnicos
+
+1.  Funcionalidades Obrigatórias:
+
+```
+    • Consumir a API pública PokéAPI para listar Pokémons.
+    • Implementar um filtro funcional baseado no nome dos Pokémons.
+    • Aplicar estilização com styled-components ao componente de listagem (tabela ou lista).
+```
+
+2.  Tecnologias a serem usadas:
+
+```
+    • React com TypeScript.
+    • Styled-components para a estilização.
+    • Biblioteca de fetch de sua escolha (ex.: fetch, axios, etc.).
+```
+
+3.  Extras (opcional):
+
+```
+    • Adicionar uma mensagem de carregamento enquanto os dados estão sendo buscados.
+    • Implementar paginação (se houver tempo).
+    • Estilização responsiva.
+    • Utilização do react-query para fazer a chamada
+```
+
+Expectativas
+
+```
+• Organização do Código:
+• Componentização clara e bem estruturada.
+• Uso de boas práticas de programação.
+• Uso de TypeScript:
+• Tipagem explícita (interfaces/types para os dados consumidos).
+• Estilização:
+• Criar estilos personalizados usando styled-components.
+• Código de estilo organizado e reutilizável.
 ```
